@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl Roots Safaris | Travels by Us, For Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#f7f5f2;
+    color:#333;
+    line-height:1.7;
+}
+
+/* Color Palette */
+:root{
+    --sage:#5f7161;
+    --deep-sage:#3a4f3c;
+    --sand:#d8cfc4;
+    --cream:#f1ede7;
+    --accent:#8c6a4d;
+}
+
+/* Header */
+header{
+    position:fixed;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-circle{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:var(--sage);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:18px;
+}
+
+.logo-text{
+    font-family:'Lora', serif;
+    font-size:18px;
+    color:var(--deep-sage);
+    font-weight:600;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--sage);
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(58,79,60,0.4), rgba(58,79,60,0.4)),
+        url('https://images.unsplash.com/photo-1516426122078-c23e76319801') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h2{
+    font-family:'Lora', serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:var(--sand);
+    color:#333;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:var(--accent);
+    color:white;
+}
+
+/* Sections */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-family:'Lora', serif;
+    font-size:32px;
+    color:var(--deep-sage);
+}
+
+/* Slideshow */
+.slideshow-container{
+    position:relative;
+    max-width:900px;
+    margin:40px auto 0;
+    height:450px;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1.5s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+/* Services */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+    text-align:center;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Team Section */
+.team{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    text-align:center;
+}
+
+.team-member img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.team-member h3{
+    font-family:'Lora', serif;
+    color:var(--deep-sage);
+    margin-bottom:5px;
+}
+
+.team-member p{
+    font-size:14px;
+    color:#666;
+}
+
+/* Contact */
+.contact-info{
+    text-align:center;
+    margin-top:20px;
+}
+
+/* Footer */
+footer{
+    background:var(--cream);
+    text-align:center;
+    padding:30px;
+    font-size:14px;
+    color:#666;
+}
+
+/* WhatsApp */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-circle">🐘</div>
+        <div class="logo-text">Pearl Roots Safaris</div>
+    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#explore">Explore</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Travels by Us, For Us.</h2>
+        <p>Authentic African journeys connecting people, culture and nature.</p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="section-title">
+        <h2>About Pearl Roots Safaris</h2>
+    </div>
+    <p style="max-width:900px;margin:auto;text-align:center;">
+        Pearl Roots Safaris (PRS) Ltd is a Ugandan travel and tourism company
+        headquartered in Kampala. We deliver authentic African experiences
+        while promoting sustainability and cultural heritage.
+    </p>
+</section>
+
+<section id="explore">
+    <div class="section-title">
+        <h2>Discover the Beauty of Africa</h2>
+    </div>
+    <div class="slideshow-container">
+        <img class="slide active" src="https://images.unsplash.com/photo-1508672019048-805c876b67e2">
+        <img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+        <img class="slide" src="https://images.unsplash.com/photo-1516426122078-c23e76319801">
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-title">
+        <h2>Our Services</h2>
+    </div>
+    <div class="services">
+        <div class="service-card">Wildlife Safaris & Cultural Tours</div>
+        <div class="service-card">Ticketing & Hotel Reservations</div>
+        <div class="service-card">Car Hire & Transfers</div>
+        <div class="service-card">Corporate & MICE Tourism</div>
+    </div>
+</section>
+
+<section id="team">
+    <div class="section-title">
+        <h2>Our Leadership Team</h2>
+    </div>
+
+    <div class="team">
+        <div class="team-member">
+            <img src="https://via.placeholder.com/180" alt="CEO">
+            <h3>Elukut Dita</h3>
+            <p>Co-Founder & Chief Executive Officer</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/180" alt="Business Development Lead">
+            <h3>Opio Edwin Benjamin</h3>
+            <p>Co-Founder & Business Development Lead</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/180" alt="Operations Lead">
+            <h3>Oriidi Joshua Mathew</h3>
+            <p>Co-Founder & Operations Lead</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section-title">
+        <h2>Contact Us</h2>
+    </div>
+    <div class="contact-info">
+        Kampala, Uganda <br>
+        +256 770 790 023 | +256 766 624 833 | +256 766 710 222 <br>
+        pearlrootssafaris@gmail.com
+    </div>
+</section>
+
+<footer>
+    © 2026 Pearl Roots Safaris (PRS) Ltd. All Rights Reserved.
+</footer>
+
+<a href="https://wa.me/256770790023" class="whatsapp">💬</a>
+
+<script>
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>
